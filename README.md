@@ -1,16 +1,49 @@
-# React + Vite
+# AI Interview Pro
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Master your next interview with AI-driven simulations and feedback.
 
-Currently, two official plugins are available:
+## Project Architecture
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+This is a full-stack application with a **React (Vite)** frontend and a **Node.js (Express)** backend.
 
-## React Compiler
+- **Frontend**: Handles the UI, state management, and user interactions.
+- **Backend**: Manages AI logic, API keys, and handles communication with Google's Gemini API.
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+## Setup Instructions
 
-## Expanding the ESLint configuration
+### 1. Backend Setup
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+1. Navigate to the `server` directory:
+   ```bash
+   cd server
+   ```
+2. Create a `.env` file in the `server` folder:
+   ```env
+   GEMINI_API_KEY=your_actual_key_here
+   PORT=5000
+   ```
+3. Install dependencies and start the server:
+   ```bash
+   npm install
+   npm run dev
+   ```
+
+### 2. Frontend Setup
+
+1. In the root directory, create/update the `.env` file:
+   ```env
+   VITE_API_URL=http://localhost:5000/api
+   ```
+2. Install dependencies and start the frontend:
+   ```bash
+   npm install
+   npm run dev
+   ```
+
+## Key Features
+
+- **Real-time AI Interviewer**: Dynamic question generation based on your role and level.
+- **Support for Multiple Roles**: SDE, Frontend, Backend, Data Science, Product Management, and more.
+- **Interview Types**: Technical, Behavioral, System Design, Case Studies, etc.
+- **Deep Analysis**: Get instant feedback on your performance.
+- **Premium UI**: Modern, responsive design with dark mode support.

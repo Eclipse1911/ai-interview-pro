@@ -1,26 +1,12 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+import Navbar from '../components/Navbar';
 
 export default function LandingPage() {
   return (
     <div className="bg-surface font-body-md text-on-surface selection:bg-primary-fixed min-h-screen">
       
-{/* Top Navigation Bar */}
-<header className="bg-white dark:bg-gray-900 shadow-sm border-b border-gray-100 dark:border-gray-800 sticky top-0 z-[100]">
-<div className="flex justify-between items-center w-full px-6 h-16 max-w-7xl mx-auto">
-<div className="flex items-center gap-8">
-<Link to="/" className="text-xl font-bold tracking-tight text-blue-700 dark:text-blue-400">AI Interview Pro</Link>
-<nav className="hidden md:flex items-center gap-6">
-<Link className="text-blue-700 dark:text-blue-400 border-b-2 border-blue-700 dark:border-blue-400 pb-1 font-headline-md text-label-md" to="/dashboard">Dashboard</Link>
-<Link className="text-gray-600 dark:text-gray-400 font-medium hover:text-blue-800 dark:hover:text-blue-300 transition-colors duration-200 font-headline-md text-label-md" to="/history">History</Link>
-</nav>
-</div>
-<div className="flex items-center gap-4">
-<button className="material-symbols-outlined text-on-surface-variant hover:text-primary transition-colors">notifications</button>
-<Link to="/profile" className="material-symbols-outlined text-on-surface-variant hover:text-primary transition-colors">account_circle</Link>
-</div>
-</div>
-</header>
+<Navbar />
 <main className="w-full">
 {/* Hero Section */}
 <section className="relative pt-20 pb-32 overflow-hidden">

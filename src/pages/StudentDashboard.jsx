@@ -1,28 +1,12 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+import Navbar from '../components/Navbar';
 
 export default function StudentDashboard() {
   return (
     <div className="bg-surface font-body-md text-on-surface selection:bg-primary-fixed min-h-screen">
       
-{/* TopNavBar */}
-<header className="bg-white border-b border-gray-100 shadow-sm sticky top-0 z-50">
-<div className="flex justify-between items-center w-full px-6 h-16 max-w-7xl mx-auto">
-<Link to="/" className="text-xl font-bold tracking-tight text-blue-700">AI Interview Pro</Link>
-<nav className="hidden md:flex items-center space-x-8">
-<Link className="text-blue-700 border-b-2 border-blue-700 pb-1 font-headline-md text-[16px]" to="/">Dashboard</Link>
-<Link className="text-gray-600 font-medium hover:text-blue-800 transition-colors duration-200 font-headline-md text-[16px]" to="/history">History</Link>
-</nav>
-<div className="flex items-center space-x-4">
-<button className="p-2 text-gray-600 hover:bg-gray-50 rounded-full transition-transform active:scale-95">
-<span className="material-symbols-outlined">notifications</span>
-</button>
-<Link to="/profile" className="p-2 text-gray-600 hover:bg-gray-50 rounded-full transition-transform active:scale-95 flex items-center justify-center">
-<span className="material-symbols-outlined">account_circle</span>
-</Link>
-</div>
-</div>
-</header>
+<Navbar />
 <main className="max-w-7xl mx-auto px-6 py-10">
 {/* Welcome Header */}
 <div className="mb-10">

@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { Link, useNavigate } from 'react-router-dom';
+import Navbar from '../components/Navbar';
 
 export default function InterviewSetup() {
   const navigate = useNavigate();
@@ -16,25 +17,7 @@ export default function InterviewSetup() {
 
   return (
     <div className="bg-surface font-body-md text-on-surface selection:bg-primary-fixed min-h-screen">
-      
-      {/* TopNavBar */}
-      <header className="bg-white dark:bg-gray-900 border-b border-gray-100 dark:border-gray-800 shadow-sm sticky top-0 z-50">
-        <nav className="flex justify-between items-center w-full px-6 h-16 max-w-7xl mx-auto font-['Inter'] antialiased">
-          <Link to="/" className="text-xl font-bold tracking-tight text-blue-700 dark:text-blue-400">AI Interview Pro</Link>
-          <div className="hidden md:flex items-center space-x-8">
-            <Link className="text-gray-600 dark:text-gray-400 font-medium hover:text-blue-800 dark:hover:text-blue-300 transition-colors duration-200" to="/dashboard">Dashboard</Link>
-            <Link className="text-gray-600 dark:text-gray-400 font-medium hover:text-blue-800 dark:hover:text-blue-300 transition-colors duration-200" to="/history">History</Link>
-          </div>
-          <div className="flex items-center space-x-4">
-            <button className="text-gray-600 dark:text-gray-400 hover:text-blue-700 active:scale-95 transition-all">
-              <span className="material-symbols-outlined">notifications</span>
-            </button>
-            <Link to="/profile" className="text-gray-600 dark:text-gray-400 hover:text-blue-700 active:scale-95 transition-all flex items-center justify-center">
-              <span className="material-symbols-outlined">account_circle</span>
-            </Link>
-          </div>
-        </nav>
-      </header>
+      <Navbar />
 
       {/* Main Content Canvas */}
       <main className="flex-grow flex flex-col items-center justify-center p-gutter">
@@ -71,9 +54,17 @@ export default function InterviewSetup() {
                   onChange={(e) => setRole(e.target.value)}
                   className="w-full h-12 bg-surface-container-low border border-outline-variant rounded-lg px-4 font-body-md text-on-surface appearance-none focus:ring-2 focus:ring-primary focus:border-primary transition-all outline-none"
                 >
-                  <option value="SDE">SDE</option>
+                  <option value="SDE">Software Development Engineer</option>
+                  <option value="Frontend Developer">Frontend Developer</option>
+                  <option value="Backend Developer">Backend Developer</option>
+                  <option value="Full Stack Developer">Full Stack Developer</option>
                   <option value="Data Analyst">Data Analyst</option>
+                  <option value="Data Scientist">Data Scientist</option>
                   <option value="ML Engineer">ML Engineer</option>
+                  <option value="Product Manager">Product Manager</option>
+                  <option value="UI/UX Designer">UI/UX Designer</option>
+                  <option value="DevOps Engineer">DevOps Engineer</option>
+                  <option value="QA Engineer">QA Engineer</option>
                 </select>
                 <div className="absolute right-4 top-1/2 -translate-y-1/2 pointer-events-none text-on-surface-variant">
                   <span className="material-symbols-outlined">expand_more</span>
@@ -89,9 +80,13 @@ export default function InterviewSetup() {
                   onChange={(e) => setType(e.target.value)}
                   className="w-full h-12 bg-surface-container-low border border-outline-variant rounded-lg px-4 font-body-md text-on-surface appearance-none focus:ring-2 focus:ring-primary focus:border-primary transition-all outline-none"
                 >
-                  <option value="HR">HR</option>
-                  <option value="Technical">Technical</option>
-                  <option value="Mixed">Mixed</option>
+                  <option value="Technical">Technical Interview</option>
+                  <option value="Behavioral">Behavioral (HR)</option>
+                  <option value="Coding Challenge">Coding Challenge</option>
+                  <option value="System Design">System Design</option>
+                  <option value="Case Study">Case Study</option>
+                  <option value="Cultural Fit">Cultural Fit</option>
+                  <option value="Mixed">Mixed (All-in-one)</option>
                 </select>
                 <div className="absolute right-4 top-1/2 -translate-y-1/2 pointer-events-none text-on-surface-variant">
                   <span className="material-symbols-outlined">expand_more</span>

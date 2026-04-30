@@ -1,24 +1,12 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+import Navbar from '../components/Navbar';
 
 export default function PerformanceFeedback() {
   return (
     <div className="bg-surface font-body-md text-on-surface selection:bg-primary-fixed min-h-screen">
       
-{/* TopNavBar (Shared Component) */}
-<header className="bg-white dark:bg-gray-900 shadow-sm border-b border-gray-100 dark:border-gray-800 sticky top-0 z-40">
-<div className="flex justify-between items-center w-full px-6 h-16 max-w-7xl mx-auto">
-<Link to="/" className="text-xl font-bold tracking-tight text-blue-700 dark:text-blue-400 font-['Inter'] antialiased">AI Interview Pro</Link>
-<nav className="hidden md:flex items-center space-x-8">
-<Link className="text-gray-600 dark:text-gray-400 font-medium hover:text-blue-800 dark:hover:text-blue-300 transition-colors duration-200 font-['Inter']" to="/dashboard">Dashboard</Link>
-<Link className="text-blue-700 dark:text-blue-400 border-b-2 border-blue-700 dark:border-blue-400 pb-1 font-['Inter']" to="/history">History</Link>
-</nav>
-<div className="flex items-center space-x-4">
-<button className="material-symbols-outlined text-gray-600 active:scale-95 transition-transform">notifications</button>
-<Link to="/profile" className="material-symbols-outlined text-gray-600 active:scale-95 transition-transform flex items-center justify-center">account_circle</Link>
-</div>
-</div>
-</header>
+<Navbar />
 <main className="max-w-7xl mx-auto px-margin pt-lg">
 {/* Score Section */}
 <section className="flex flex-col items-center justify-center text-center mb-xl">

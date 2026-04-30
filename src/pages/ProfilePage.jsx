@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { Link, useNavigate } from 'react-router-dom';
+import Navbar from '../components/Navbar';
 
 export default function ProfilePage() {
   const navigate = useNavigate();
@@ -60,24 +61,7 @@ export default function ProfilePage() {
   return (
     <div className="bg-surface font-body-md text-on-surface dark:bg-gray-900 dark:text-gray-100 selection:bg-primary-fixed min-h-screen pb-24 md:pb-0 transition-colors duration-300">
       
-      {/* Top Navigation Bar */}
-      <header className="bg-white dark:bg-gray-900 border-b border-gray-100 dark:border-gray-800 shadow-sm sticky top-0 z-50 transition-colors duration-300">
-        <div className="flex justify-between items-center w-full px-6 h-16 max-w-7xl mx-auto">
-          <Link to="/" className="text-xl font-bold tracking-tight text-blue-700 dark:text-blue-400">AI Interview Pro</Link>
-          <nav className="hidden md:flex items-center space-x-8">
-            <Link className="text-gray-600 dark:text-gray-400 font-medium hover:text-blue-800 dark:hover:text-blue-300 transition-colors duration-200 font-headline-md text-[16px]" to="/dashboard">Dashboard</Link>
-            <Link className="text-gray-600 dark:text-gray-400 font-medium hover:text-blue-800 dark:hover:text-blue-300 transition-colors duration-200 font-headline-md text-[16px]" to="/history">History</Link>
-          </nav>
-          <div className="flex items-center space-x-4">
-            <button className="p-2 text-gray-600 dark:text-gray-400 hover:bg-gray-50 dark:hover:bg-gray-800 rounded-full transition-all active:scale-95">
-              <span className="material-symbols-outlined">notifications</span>
-            </button>
-            <Link to="/profile" className="p-2 text-primary bg-primary-fixed dark:bg-blue-900/40 dark:text-blue-300 rounded-full transition-transform active:scale-95">
-              <span className="material-symbols-outlined">account_circle</span>
-            </Link>
-          </div>
-        </div>
-      </header>
+      <Navbar />
 
       <main className="max-w-4xl mx-auto px-6 py-10">
         <div className="mb-8">
